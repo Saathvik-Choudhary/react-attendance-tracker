@@ -1,0 +1,60 @@
+.evenRow{
+    position: relative;
+    height: 12vh;
+    width: 100%;
+
+    background-color: lightgray;
+    display: flex;
+    display:  flex;
+    flex-direction: column;
+}
+
+.oddRow{
+    position: relative;
+    height: 12vh;
+    width: 100%;
+
+    background-color: white;
+    display: flex;
+    display:  flex;
+    flex-direction: column;
+}
+
+.assetTitle{
+    align-self: flex-start;
+    position: relative;
+    margin-top: 1vh;
+    padding-left: 1vh;
+    font-weight: bolder;
+    font-size: 3vh;
+    color: black;
+    text-align: left;
+    height: 7vh;
+    width: 100%;
+}
+
+.assetDetails{
+    height: 7vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.details1{
+    position: relative;
+    font-size: 3vh;
+    color: black;
+    width: 30%;
+    text-align: right;
+}
+
+.details2{
+    position: relative;
+    text-align: left;
+    font-size: 3vh;
+    color: black;
+    width: 60%;
+}

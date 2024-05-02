@@ -1,0 +1,59 @@
+.Summary-Container{
+    margin-top: 14%;
+    position: relative;
+    height: 14%;
+    width: 98.5%;
+    margin-left: 0.15%;
+    background-color: black;
+    display: flex;
+    border: 2px solid;
+    border-color: black;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Month1Summary{
+    position: relative;
+    height: 97%;
+    width: 33.3%;
+    background-color: whitesmoke;
+}
+
+.Month2Summary{
+    position: relative;
+    height: 97%;
+    width: 32%;
+    background-color: lightgray;
+}
+
+.Month3Summary{
+    position: relative;
+    height: 97%;
+    width: 36%;
+    background-color: whitesmoke;
+}
+
+.content{
+    position: relative;
+    padding-top: 8%;
+    margin-left: 8%;
+    font-weight: bolder;
+    font-size: 2.5vh;
+    color: black;
+}
+
+.contentValue{
+    position: relative;
+    padding-left: 10%;
+    padding-top: 12%;
+    font-size: 2vh;
+    color: black;
+    padding-right: 8%;
+    float: right;
+}
+
+.containere{
+    position: relative;
+    width: 100%;
+    text-align: left;
+}

@@ -1,0 +1,104 @@
+.App {
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-header {
+  aspect-ratio: 900/1600;
+  height: 100vh;
+  background-color: black;
+  
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-heading{
+  display: flex;
+  align-items: center;
+  background-color: #222831;
+  height: 6%;
+  width: 100%;
+  position: relative;
+}
+
+.heading{
+  padding-left: 10%;
+  font-size: 4vh;
+  color: whitesmoke;
+  font-weight: bold;
+  position: relative;
+}
+
+.DynamicContainer{
+  padding-top: 2%;
+  height: 77%;
+  background-color: white;
+  border-width: 0px;
+  overflow: auto;
+}
+
+.StaticContainer{
+  align-self: flex-end;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 16%;
+  background-color: white;
+  border-width: 0px;
+}
+
+.AssetsButton {
+  position: relative;
+  height: 100%;
+  width: 30%;
+  justify-content: center;
+  background-color: #45474B;
+  border: 3px solid #000;
+  border-left: 0px;
+}
+
+.HomeButton{
+  height: 100%;
+  width: 30%;
+  justify-content: center;
+  background-color: #45474B;
+  border: 3px solid #000;
+}
+
+.contents{
+  position: relative;
+  font-weight: bolder;
+  font-size: 4vh;
+  color: white;
+}
+
+.newAsset{
+  position: relative;
+  background-color: white;
+  height: 12%;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  border-width: 0;
+}
+
+.ButtonName{
+  width: 50%;
+  padding-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  font-size: 3.8vh;
+  font-weight: bolder;
+}
+
+.evenRow{
+  background-color: #000;
+}
+
+.oddRow{
+  background-color: antiquewhite;
+}
