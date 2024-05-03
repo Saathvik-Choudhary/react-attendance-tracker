@@ -1,5 +1,5 @@
 import './App.css';
-import ExpenseList from './AttendanceList';
+import AttendanceList from './AttendanceList';
 import ExpenseSummary from './AttendanceSummary'; // Assuming correct import path
 import React, { useState, useEffect } from 'react';
 
@@ -59,7 +59,7 @@ const getAttendanceList = () =>{
               </button>
               {
               list.map((item,index) => (
-              <ExpenseList key={index}
+              <AttendanceList key={index}
                             title={item.title} 
                             dateOfExpense = {item.dateOfExpense} 
                             cost ={item.cost}

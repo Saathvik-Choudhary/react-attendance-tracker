@@ -1,6 +1,6 @@
 import "./AttendanceList.css"; // Assuming correct import path for styles
 
-function ExpenseList({  dateOfAttendance = "", InTime = 0, OutTime = 0, hours=0, i=0}) {
+function AttendanceList({  dateOfAttendance = "", InTime = 0, OutTime = 0, hours=0, i=0}) {
     
     function formatYearsMonths(dateOfExpense) {
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -29,4 +29,4 @@ function ExpenseList({  dateOfAttendance = "", InTime = 0, OutTime = 0, hours=0,
   );
 }
 
-export default ExpenseList;
+export default AttendanceList;
