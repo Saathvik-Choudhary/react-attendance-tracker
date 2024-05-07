@@ -29,6 +29,11 @@ function ExpenseSummary() {
             });
     };
 
+    function millisecondsToHours(milliseconds) {
+        var hours = milliseconds / (1000 * 60 * 60);
+        return Math.floor(hours);
+    }
+
     return (
         <div className="Summary-Container">
             {monthSummaries.length > 0 ? (
@@ -36,7 +41,7 @@ function ExpenseSummary() {
                     <div key={index} className="Month1Summary">
                         <div className="container">
                             <div className="content">{formatDate(summary.month)}</div>
-                            <div className="contentValue">USD {summary.totalAttendance?.toFixed(2)}</div>
+                            <div className="contentValue">{millisecondsToHours(summary.totalWorkingHours)}h</div>
                         </div>
                     </div>
                 ))

@@ -59,12 +59,11 @@ const getAttendanceList = () =>{
               </button>
               {
               list.map((item,index) => (
-              <AttendanceList key={index}
-                            title={item.title} 
-                            dateOfExpense = {item.dateOfExpense} 
-                            cost ={item.cost}
-                            currency={item.currency}
-                            i={index}
+              <AttendanceList key         =   {index}
+                              login       =   {item.logIn} 
+                              logout      =   {item.logOut} 
+                              workingTime =   {item.workingTime}
+                              i           =   {index}
               />
               ))}
             </>

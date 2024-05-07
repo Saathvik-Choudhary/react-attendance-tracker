@@ -34,6 +34,7 @@
 }
 
 .assetDetails{
+    width: 100%;
     height: 7vh;
     position: relative;
     display: flex;
@@ -47,8 +48,8 @@
     position: relative;
     font-size: 3vh;
     color: black;
-    width: 30%;
-    text-align: right;
+    width: 40%;
+    text-align: left;
 }
 
 .details2{
@@ -56,5 +57,13 @@
     text-align: left;
     font-size: 3vh;
     color: black;
-    width: 60%;
+    width: 40%;
+}
+
+.details3{
+    position: relative;
+    text-align: left;
+    font-size: 3vh;
+    color: black;
+    width: 20%;
 }

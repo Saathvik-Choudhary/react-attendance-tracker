@@ -40,6 +40,7 @@
     font-weight: bolder;
     font-size: 2.5vh;
     color: black;
+
 }
 
 .contentValue{
@@ -49,7 +50,7 @@
     font-size: 2vh;
     color: black;
     padding-right: 8%;
-    float: right;
+    float: center;
 }
 
 .containere{
