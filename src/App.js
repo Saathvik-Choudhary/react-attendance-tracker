@@ -14,6 +14,7 @@ function App() {
     setActiveSection('Home');
     setIsHomeButtonClicked(true); // Set Home button as clicked
     setIsAssetButtonClicked(false); // Reset Asset button state
+    a();
   };
 
   const handleAssetClick = () => {
@@ -26,9 +27,38 @@ function App() {
 
   const [list, setAttendanceList] = useState([]);
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   a();
+  // });
+
+  const a=() => {
         getAttendanceList();
-  }, []);
+        const fetchData = async () => {
+          try {
+              const response = await fetch('http://localhost:8080/attendance/checkLogin');
+              const data = await response.json();
+              setIsButtonDisabled(!data.status); // Assuming API response contains a field 'isLoggedIn'
+              console.log(!data.status)
+          } catch (error) {
+              console.error('Error fetching data:', error);
+          }
+      };
+
+      fetchData();
+
+      const fetchData1 = async () => {
+        try {
+            const response = await fetch('http://localhost:8080/attendance/checkLogOut');
+            const data = await response.json();
+            setIsButtonDisabled1(!data.status); // Assuming API response contains a field 'isLoggedIn'
+            console.log(data.status)
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    fetchData1();
+  };
 
 const getAttendanceList = () =>{
      fetch('http://localhost:8080/attendance')
@@ -41,6 +71,61 @@ const getAttendanceList = () =>{
        })
     }
 
+    const handleLogin = () => {
+      const currentDate = new Date();
+
+      try {
+          fetch('http://localhost:8080/attendance/logIn', {
+            method: 'PUT', // or 'GET', 'PUT', etc. depending on your API
+            headers: {
+                'Content-Type': 'application/json',
+                // Add any other headers if needed
+            },
+            // Optionally, include a request body if your endpoint expects one
+            body: JSON.stringify({
+                "zoneOffset": "+00:30"
+            }),
+        });
+    } catch (error) {
+        // Handle any errors that occur during the request
+        console.error('Error logging in:', error.message);
+    }
+      
+      // Create a DateTimeFormat object with the desired options
+      const timeZoneOffset = new Intl.DateTimeFormat('en-US', { timeZoneName: 'short' }).formatToParts(currentDate)
+        .find(part => part.type === 'timeZoneName').value;
+      
+      console.log('Timezone offset:', timeZoneOffset);
+    }
+
+    const handleLogout = () => {
+      const currentDate = new Date();
+
+      try {
+          fetch('http://localhost:8080/attendance/logOut', {
+            method: 'PUT', // or 'GET', 'PUT', etc. depending on your API
+            headers: {
+                'Content-Type': 'application/json',
+                // Add any other headers if needed
+            },
+            // Optionally, include a request body if your endpoint expects one
+            body: JSON.stringify({
+            }),
+        });
+    } catch (error) {
+        // Handle any errors that occur during the request
+        console.error('Error logging in:', error.message);
+    }
+      
+      // Create a DateTimeFormat object with the desired options
+      const timeZoneOffset = new Intl.DateTimeFormat('en-US', { timeZoneName: 'short' }).formatToParts(currentDate)
+        .find(part => part.type === 'timeZoneName').value;
+      
+      console.log('Timezone offset:', timeZoneOffset);
+    }
+
+    const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+    const [isButtonDisabled1, setIsButtonDisabled1] = useState(false);
 
   return (
     <div className="App">
@@ -53,10 +138,12 @@ const getAttendanceList = () =>{
           {activeSection === 'Home' && <ExpenseSummary />}
           {activeSection === 'Spend' && (
             <>
-              <button className="newAsset">
-                <div className="ButtonName">Log In</div>
-                <div className="ButtonName">Log Out</div>
-              </button>
+              <div className="newAsset">
+                <button className="ButtonName" onClick={handleLogin} disabled={isButtonDisabled}>
+                    Log In
+                </button>
+                <button className="ButtonName" onClick={handleLogout} disabled={isButtonDisabled1}>Log Out</button>
+              </div>
               {
               list.map((item,index) => (
               <AttendanceList key         =   {index}

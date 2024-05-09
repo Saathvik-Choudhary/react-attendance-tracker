@@ -88,9 +88,10 @@
 
 .ButtonName{
   width: 50%;
-  padding-left: 2%;
-  margin-top: 2%;
-  margin-bottom: 4%;
+  height: 100%;
+  background-color: white;
+  border-width: 0%;
+  border-color: white;
   font-size: 3.8vh;
   font-weight: bolder;
 }

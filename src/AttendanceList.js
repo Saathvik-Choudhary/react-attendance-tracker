@@ -5,7 +5,6 @@ function AttendanceList({  login = "", logout = "", workingTime = 0, i=0}) {
   function formatDate(inputDate) {
     const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
     const formattedDate = new Date(inputDate).toLocaleDateString('en-US', options);
-
     return formattedDate;
   }
 
