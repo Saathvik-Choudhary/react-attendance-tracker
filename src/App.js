@@ -1,7 +1,7 @@
 import './App.css';
 import AttendanceList from './AttendanceList';
 import ExpenseSummary from './AttendanceSummary'; // Assuming correct import path
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 function App() {
 
